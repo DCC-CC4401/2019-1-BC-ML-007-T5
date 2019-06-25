@@ -102,7 +102,7 @@ def post_evaluacion(request):
             groupedRespuestas = []
             respuestasBDD = EvaluacionAspectos.objects.filter(fichaEvaluacion=ficha)
             minutos=int(ficha.tiempo/60)
-            segundos=ficha.tiempo%60
+            segundos=int(ficha.tiempo%60)
         
             for respuesta in respuestasBDD:
                 groupedRespuestas.append(respuesta_serializer(respuesta))
@@ -143,8 +143,8 @@ def send_evaluacion(request):
         tiempo=0
 
         if request.user.groups.filter(name='Profesores').exists():
-            hora=int(request.POST['hora'])
-            minutos=int(request.POST['minutos'])
+            hora=int(0 if request.POST['hora']=="NaN" else request.POST['hora'])
+            minutos=int(0 if request.POST['minutos']=="NaN" else request.POST['minutos'])
             presentador=Alumno.objects.get(pk=int(request.POST['presentador']))
             tiempo=hora*60+minutos
         fichaEvaluacion,created = FichaEvaluacion.objects.get_or_create(evaluacion=evaluacion,
