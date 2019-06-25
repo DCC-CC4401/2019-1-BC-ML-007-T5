@@ -1,6 +1,6 @@
 Bienvenido a la plataforma de evaluación.
 Tu usuario es: ProfesorRueda@gmail.com
-Tu contraseña es: 8HftV4geTD
+Tu contraseña es: h6Fs5f6hV6
 
 Bienvenido a la plataforma de evaluación.
 Tu usuario es: AyudanteMiranda@gmail.com
@@ -8,3 +8,9 @@ Tu contraseña es: yR8KzbvF4j
 
 
 Sistema de Evaluación de presentaciones
+
+
+
+Bienvenido a la plataforma de evaluación.
+Tu usuario es: eval@a.com
+Tu contraseña es: y79GYYqYME
