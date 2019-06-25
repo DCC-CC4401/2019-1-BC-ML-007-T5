@@ -16,7 +16,7 @@ class AddEvaluacion(forms.Form):
 
     rubrica = forms.ModelChoiceField(queryset=Rubrica.objects,
                                      widget=forms.Select(attrs={'class': 'form-control'}),
-                                     required=False, label='Rubrica')
+                                     required=True, label='Rubrica')
 
     fecha_inicio= forms.DateField(widget=forms.SelectDateWidget(years=YEARS.reverse()))
 
